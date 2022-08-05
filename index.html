@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Blackjack Game</title>
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<script type="text/javascript" src="gameScript.js"></script>
+
+</head>
+
+<body onload="loadDoc()">
+	<main>
+
+		<section id="main-menu">
+			<div class="game-ui">
+				<div class="main-menu-ui">
+					<h1 class="game-title">Blackjack</h1>
+					<hr>
+					<h1 class="play-text">Want to play a round?</h1>
+					<div class="menu-btns">
+						<button id="start-game" onclick="startGame()">Start Game</button>
+					</div>
+					<h3 id="player" class="player"></h3>
+				</div>
+			</div>
+		</section>
+		
+		<section id="main-game" class="hide">
+			<div class="game-ui">
+				<div class="cards-display">
+					
+					<div class="cards">
+						
+						<div class="cards-text-container">
+							<h1 class="cards-text">Cards:</h1>
+						</div>
+
+						<div id="cards-current-field" class="cards-current"></div>
+
+					</div>
+
+					<div class="draw-skip">
+						
+						<div class="cards-text-container">
+							<h1 class="cards-text">Sum = </h1>
+							<p class="cards-quantity" id="card-sum">0</p>
+						
+						</div>
+						<div id="draw-card" class="draw-container">
+							<h2 class="draw-text">DRAW CARD?</h2>
+							
+							<div class="game-btns">
+								<button onclick="drawCard()">DRAW</button>
+								<button onclick="drawSkip()">SKIP</button>
+							</div>
+						</div>
+
+					</div>
+
+					<h3 id="player-game" class="player"></h3>
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<section id="victory-defeat" class="hide">
+		<div class="vd-ui">
+			<div class="vd-card">
+				<h1 id="vd-message">Hello</h1>
+				<div class="vd-btns">
+					<button onclick="startGame()">PLAY AGAIN</button>
+					<button onclick="showMainMenu()">MAIN MENU</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>

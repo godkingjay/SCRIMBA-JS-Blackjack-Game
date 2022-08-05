@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+/*    outline: solid 1px black;*/
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    background-color: darkgreen;
+    background-image: url("images/table.png");
+    background-size: cover;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    position: relative;
+}
+
+h1 {
+    color: goldenrod;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+button {
+    color: #016f32;
+    width: 100%;
+    min-width: 120px;
+    max-width: 200px;
+    background: goldenrod;
+    padding: 10px;
+    font-weight: bold;
+    border: solid 1px #00000000;
+    border-radius: 0.5rem;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    transition: all 0.5s ease-in-out;
+    font-size: 1rem;
+    box-shadow: 0 0 1rem #00000080;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-ui {
+    display: block;
+    position: relative;
+    padding: 1rem;
+}
+
+.player {
+    display: block;
+    text-align: center;
+}
+
+/*********************/
+/*     MAIN MENU     */
+/*********************/
+
+.main-menu-ui {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+}
+
+.game-title, .play-text, #id-player {
+    text-shadow: 0 0 1rem #00000080;
+}
+
+.game-title {
+    font-size: 4rem;
+}
+
+.play-text {
+    font-size: 2rem;
+    color: white;
+}
+
+button:hover {
+    background: white;
+    color: goldenrod;
+    border-color: goldenrod;
+}
+
+
+/*********************/
+/*     MAIN GAME     */
+/*********************/
+
+.cards-display {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.cards-text,
+.cards-sum,
+.draw-text,
+.cards-quantity,
+.player {
+    text-shadow: 0 0 1rem #00000080;
+}
+
+.cards {
+    padding: 1rem;
+    border: solid 0.1rem white;
+    display: grid;
+    grid-template-rows: 1fr;
+    position: relative;
+}
+
+.cards-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.cards-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/*********************/
+/*       CARDS       */
+
+.cards-current {
+    display: flex;
+    max-width: 20rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: auto;
+    text-align: center;
+    aspect-ratio: 2/3;
+    width: 100%;
+    max-width: 5rem;
+    font-size: 3rem;
+    color: darkgreen;
+    margin: 0;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 1rem #00000080;
+}
+
+/*                   */
+/*********************/
+
+.cards-quantity {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.draw-skip {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+
+.draw-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.game-btns {
+    display: flex;
+    gap: 1rem;
+}
+
+
+/*********************/
+/* VICTORY OR DEFEAT */
+/*********************/
+
+#victory-defeat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    max-width: 100vw;
+    height: 100%;
+    width: 100%;
+    background: #00000080;
+    align-items: center;
+    justify-content: center;
+}
+
+.vd-uid {
+    display: block;
+    padding: 1rem;
+}
+
+.vd-card {
+    display: flex;
+    padding: 2rem;
+    border: 0.1rem white solid;
+    background: url("images/table.png");
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#vd-message {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.vd-btns {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.victory {
+    color: green;
+    text-shadow: 0 0 1rem #00000080;
+}
+
+.defeat {
+    color: red;
+    text-shadow: 0 0 1rem #ff000080;
+}
+
+
+/*********************/
+/*    SHOW & HIDE    */
+/*********************/
+
+.show-flex {
+    display: flex;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+/*********************/
+/*    MEDIA QUERY    */
+/*********************/
+
+@media (max-width: 375px) {
+
+    .game-title {
+        font-size: 3.5rem;
+    }
+    .play-text {
+        font-size: 1.75rem;
+        color: white;
+    }
+
+    .vd-card {
+        padding: 0.5rem;
+        max-width: 17rem;
+    }
+}
