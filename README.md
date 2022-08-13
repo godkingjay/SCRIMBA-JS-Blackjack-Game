@@ -1,4 +1,4 @@
-# Scrimba - JavaScript Free Course (Build A Passenger Counter App)
+# Scrimba - JavaScript Free Course (Build a Blackjack Game)
 
 This is my code of the "Build a Blackjack Game" challenge of Scrimba.
 
